@@ -1,0 +1,22 @@
+<div class="row">
+{% if products %}
+<div class="pb-3">Showing {{ products|length }} items</div>
+{% for product in products %}
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card">
+    <div>
+        <img src="{{ product.picture.url }}" alt="{{ product.title }}" class="w-100" />
+    </div>
+    <div class="card-body">
+        <a href="" class="text-reset">
+        <h5 class="card-title mb-3">{{ product.title }}</h5>
+        </a>
+        <h6 class="mb-3">BDT {{ product.price }}</h6>
+        <button type="button" class="btn btn-danger mb-2">BUY NOW</button>
+        <button type="button" class="btn btn-dark">ADD TO CART</button>
+    </div>
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+</div>
